@@ -1,0 +1,1 @@
+export const MOVE_PAGE = 'page/MOVE_PAGE';

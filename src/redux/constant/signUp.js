@@ -1,0 +1,1 @@
+export const CHANGE_POSITION = 'signUp/CHANGE_POSITION';
