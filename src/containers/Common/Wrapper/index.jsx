@@ -30,7 +30,7 @@ const StyledWrapper = styled.div`
 		props.gridArea === 'MENU' &&
 		css`
 			display: grid;
-			grid-template-columns: 1fr 1fr;
+			grid-template-columns: 1fr 1fr 1fr;
 		`}
 
 	${props =>

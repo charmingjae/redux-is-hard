@@ -6,6 +6,7 @@ import Wrapper from './containers/Common/Wrapper';
 import Header from './containers/Header';
 import Dive from './pages/Dive';
 import Ground from './pages/Ground';
+import GroundTwo from './pages/GroundTwo';
 import Main from './pages/Main';
 import Member from './pages/Member';
 import SignUp from './pages/SignUp/SignUp';
@@ -42,6 +43,9 @@ const App = () => {
 					</Route>
 					<Route path="ground">
 						<Route index element={<Ground />} />
+					</Route>
+					<Route path="groundTwo">
+						<Route index element={<GroundTwo />} />
 					</Route>
 				</Routes>
 			</Wrapper>

@@ -1,7 +1,8 @@
-import { Button } from '@mui/material';
+import { Button, Stack } from '@mui/material';
 import React, { useEffect } from 'react';
 import { ADD_OBJ, PRESENT_FROM } from '../../redux/constant/ground';
 import { presentFrom } from '../../redux/reducer/ground';
+import { changeQueryKey } from '../../redux/reducer/query';
 import Wrapper from '../Common/Wrapper';
 
 const RightSide = ({ basic, dispatch, obj }) => {
@@ -19,18 +20,30 @@ const RightSide = ({ basic, dispatch, obj }) => {
 		);
 	};
 
+	// const queryClient = useQueryClient();
+	const onQueryClickHandler = () => {
+		// alert('Query');
+		dispatch(changeQueryKey(2));
+		// queryClient.invalidateQueries({ queryKey: ['test'] });
+	};
+
 	useEffect(() => {
 		console.log('Rightside rerendered.');
 	}, []);
 
 	return (
 		<Wrapper GROUNDRIGHT>
-			<Button onClick={onButtonClickHandler} variant="contained">
-				Right Button
-			</Button>
-			<Button onClick={onAddClickHandler} variant="contained">
-				ADD OBJ
-			</Button>
+			<Stack direction="row" spacing={3}>
+				<Button onClick={onButtonClickHandler} variant="contained">
+					Right Button
+				</Button>
+				<Button onClick={onAddClickHandler} variant="contained">
+					ADD OBJ
+				</Button>
+				<Button onClick={onQueryClickHandler} variant="contained">
+					Query
+				</Button>
+			</Stack>
 			<div>
 				<p>
 					Basic : <b>{basic}</b>
