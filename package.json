@@ -4,7 +4,7 @@
 	"description": "",
 	"main": "index.jsx",
 	"scripts": {
-		"test": "jest",
+		"test": "jest --coverage",
 		"build": "webpack",
 		"dev": "webpack serve"
 	},
